@@ -1,0 +1,13 @@
+.plain-link {
+    text-decoration: none;
+}
+
+.plain-link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link-mobile {
+    text-align: center;
+    padding: 1rem 0;
+}
