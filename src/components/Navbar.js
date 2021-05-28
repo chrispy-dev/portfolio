@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Collapse } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faPlus } from '@fortawesome/pro-duotone-svg-icons'; 
+import { faBars, faPlus, faDrumstickBite, faBacon, faFrenchFries } from '@fortawesome/pro-duotone-svg-icons'; 
 
 export const Navbar = ({ isOpen, setIsOpen }) => {
     return (
@@ -13,7 +13,8 @@ export const Navbar = ({ isOpen, setIsOpen }) => {
             </div>
             <Collapse className="flex flex-col shadow-nav" isOpen={isOpen}>
                 <Link className="plain-link nav-link-mobile bg-white" to="/about" onClick={() => setIsOpen(false)}>About</Link>
-                <Link className="plain-link nav-link-mobile pb-10 bg-white" to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+                <Link className="plain-link nav-link-mobile bg-white" to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
+                <Link className="plain-link nav-link-mobile pb-12 bg-white" to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
             </Collapse>
         </div>
     )

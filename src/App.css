@@ -11,3 +11,15 @@
     text-align: center;
     padding: 1rem 0;
 }
+
+.welcome {
+    animation: wiggle 2.5s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotateZ(0deg); }
+   80% { transform: rotateZ(0deg); }
+   85% { transform: rotateZ(5deg); }
+   95% { transform: rotateZ(-5deg); }
+  100% { transform: rotateZ(0deg); }
+}
