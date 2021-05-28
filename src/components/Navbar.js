@@ -2,19 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Collapse } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faPlus, faDrumstickBite, faBacon, faFrenchFries } from '@fortawesome/pro-duotone-svg-icons'; 
+import { faBars, faPlus } from '@fortawesome/pro-duotone-svg-icons'; 
 
-export const Navbar = ({ isOpen, setIsOpen }) => {
+export const Navbar = ({ isOpen, setIsOpen, fun, setFun, colorChanger }) => {
     return (
         <div className="absolute w-full">
             <div className="flex justify-between px-4 items-center">
-                <Link to="/" className="text-3xl py-4 plain-link" onClick={() => setIsOpen(false)}>Chris P.</Link>
+                <div className="flex">
+                    <Link to="/" className={`text-3xl py-4 plain-link`} onClick={() => setIsOpen(false)}>{colorChanger('Chris P.')}</Link>
+                    <div className={`border-3 flex ${fun ? "justify-end" : "justify-start"} transform scale-50 border-gray-800 rounded-full w-16 h-10 p-0.5 mt-4`} onClick={() => setFun(!fun)}>
+                        <div className="h-full w-8 bg-gray-900 rounded-full"></div>
+                    </div>
+                </div>
                 <FontAwesomeIcon className={`text-2xl ${isOpen ? "transform rotate-45" : ""}`} icon={isOpen ? faPlus : faBars} onClick={() => setIsOpen(!isOpen)} />
             </div>
-            <Collapse className="flex flex-col shadow-nav" isOpen={isOpen}>
-                <Link className="plain-link nav-link-mobile bg-white" to="/about" onClick={() => setIsOpen(false)}>About</Link>
-                <Link className="plain-link nav-link-mobile bg-white" to="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-                <Link className="plain-link nav-link-mobile pb-12 bg-white" to="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+            <Collapse className="flex flex-col shadow-nav relative items-center z-10 bg-white" isOpen={isOpen}>
+                <Link className="plain-link nav-link-mobile" to="/about" onClick={() => setIsOpen(false)}>{colorChanger('About')}</Link>
+                <Link className="plain-link nav-link-mobile" to="/projects" onClick={() => setIsOpen(false)}>{colorChanger('Projects')}</Link>
+                <Link className="plain-link nav-link-mobile pb-12" to="/contact" onClick={() => setIsOpen(false)}>{colorChanger('Contact')}</Link>
             </Collapse>
         </div>
     )

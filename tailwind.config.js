@@ -5,7 +5,8 @@ module.exports = {
       extend: {
         fontFamily: {
           'roboto-slab': ['"Roboto Slab"', 'serif'],
-          'pacifico': ['Pacifico', 'cursive']
+          'pacifico': ['Pacifico', 'cursive'],
+          'fredoka-one': ['"Fredoka One"', 'cursive']
         },
         boxShadow: {
           'nav': '0 1rem 1rem -1rem #333',
@@ -15,7 +16,11 @@ module.exports = {
           'nav': '84px'
         },
         minHeight: {
-          'nav-screen': 'calc(100vh - 84px - 101.5px)'
+          'nav-screen': 'calc(100vh - 84px - 165.5px)',
+          'nav-screen-fun': 'calc(100vh - 84px - 166px)'
+        },
+        textColor: {
+          'orange-600': '#FE5E01'
         }
       },
   },

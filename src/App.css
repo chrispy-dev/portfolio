@@ -13,13 +13,14 @@
 }
 
 .welcome {
-    animation: wiggle 2.5s infinite;
+    animation: wiggle 2s infinite;
+    transform-origin: bottom;
 }
 
 @keyframes wiggle {
     0% { transform: rotateZ(0deg); }
    80% { transform: rotateZ(0deg); }
-   85% { transform: rotateZ(5deg); }
-   95% { transform: rotateZ(-5deg); }
+   85% { transform: rotateZ(10deg); }
+   95% { transform: rotateZ(-10deg); }
   100% { transform: rotateZ(0deg); }
 }
