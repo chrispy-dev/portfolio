@@ -6,12 +6,37 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Projects } from './pages/Projects';
+import { Contact } from './pages/Contact';
 
 import './App.css';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [fun, setFun] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+    phone: ""
+  })
+
+  const onInputChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value
+    });
+  };
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    setFormValues({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+  };
 
   const colorChanger = (string) => {
     let stringArr = string.split('');
@@ -59,7 +84,23 @@ const App = () => {
         }} />
 
         <Route exact path="/projects" render={() => {
-          return <Projects />
+          return <Projects 
+            fun={fun}
+            colorChanger={colorChanger}
+          />
+        }} />
+
+        <Route exact path="/contact" render={() => {
+          return <Contact 
+            formValues={formValues}
+            setFormValues={setFormValues}
+            onInputChange={onInputChange}
+            onFormSubmit={onFormSubmit}
+            fun={fun}
+            colorChanger={colorChanger}
+            emailSent={emailSent}
+            setEmailSent={setEmailSent}
+          />
         }} />
       </div>
 

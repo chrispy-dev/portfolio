@@ -1,9 +1,47 @@
 import React from 'react'
 
-export const Projects = () => {
+export const Projects = ({ fun, colorChanger }) => {
+    const projects = [
+        {
+            name: 'Mobalytics Replica',
+            href: 'https://nostalgic-yonath-730297.netlify.app',
+            src: process.env.PUBLIC_URL + (fun ? './imgs/mobalytics_drawing_fun.png' : './imgs/mobalytics_drawing.png'),
+            description: "My attempt at replicating Mobalytics' beautiful look.",
+            color: 'border-purple-700'
+        },
+        {
+            name: 'Xtreme Fitness',
+            href: 'http://xtremefitnessmadera.com',
+            src: process.env.PUBLIC_URL + (fun ? './imgs/xtreme_drawing_fun.png' : './imgs/xtreme_drawing.png'),
+            description: "Recent website for a client that I enjoyed working on.",
+            color: 'border-yellow-400'
+        },
+        {
+            name: 'My Github',
+            href: 'https://github.com/onetrckchris',
+            src: process.env.PUBLIC_URL + (fun ? './imgs/github_drawing_fun.png' : './imgs/github_drawing.png'),
+            description: "Some of my other projects, personal and for school!",
+            color: 'border-green-700'
+        }
+    ]
+
     return (
-        <div className="flex justify-center items-center min-h-nav-screen-fun">
-            These are my projects.
+        <div className="flex flex-col justify-center w-full max-w-screen-md items-center min-h-nav-screen-fun pb-12">
+            <h1 className="text-lg pt-4">Take a look at some of my stuff!</h1>
+            <h3 className="text-sm pb-4">Click on them to open up the project</h3>
+            <div className="lg:flex">
+            {
+                projects.map(project => {
+                    return (
+                        <div className="border-2 border-gray-900 w-64 rounded-md shadow-lg my-6 lg:mx-6">
+                            <a href={project.href} target='_blank' rel="noreferrer"><img className="border-b-2 rounded border-gray-900" src={project.src} /></a>
+                            <h2 className="text-xl text-center pt-3">{colorChanger(project.name)}</h2>
+                            <p className="text-sm p-3 text-center">{project.description}</p>
+                        </div>
+                    )
+                })
+            }
+            </div>
         </div>
     )
 }

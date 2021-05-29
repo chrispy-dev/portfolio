@@ -24,3 +24,14 @@
    95% { transform: rotateZ(-10deg); }
   100% { transform: rotateZ(0deg); }
 }
+
+.form-input {
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 4px 5px;
+}
+
+.orange-bg {
+    background-color: #FE5E01;
+}

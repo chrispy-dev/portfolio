@@ -8,7 +8,7 @@ export const About = ({ fun, setFun, colorChanger }) => {
                 <h6 className="text-xs">Not actually me pictured below.</h6>
             </div>
             <img className="py-8" src={fun ? process.env.PUBLIC_URL + "./imgs/chris_fun.png" : process.env.PUBLIC_URL + "./imgs/chris.png"} alt="#" />
-            <div className="px-8 py-8">
+            <div className="px-8 py-8 leading-5">
                 <p className="text-lg">My actual name is Christian Pelayo, but everyone has called me Chris for as long as I could remember.</p><br />
                 <p className="text-lg">I started programming right out of high school, mostly interested in game developement. I studied C++ and C# within Unity and the Unreal Engine on my own using whatever resources I could find online. <span className="text-xs">Thank you Udemy.</span> I enjoyed that very much and worked on personal projects here and there until I discovered...</p><br />
                 <h1 className="text-4xl font-pacifico text-center py-8">{colorChanger('Game Analytics')}</h1><br />
