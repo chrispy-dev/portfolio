@@ -16,8 +16,8 @@ module.exports = {
           'nav': '84px'
         },
         minHeight: {
-          'nav-screen': 'calc(100vh - 84px - 133.5px)',
-          'nav-screen-fun': 'calc(100vh - 84px - 134px)'
+          'nav-screen': 'calc(100vh - 84px - 69.1px)',
+          'nav-screen-fun': 'calc(100vh - 84px - 70.1px)'
         },
         textColor: {
           'orange-600': '#FE5E01'
