@@ -5,21 +5,21 @@ export const Projects = ({ fun, colorChanger }) => {
         {
             name: 'Mobalytics Replica',
             href: 'https://nostalgic-yonath-730297.netlify.app',
-            src: process.env.PUBLIC_URL + (fun ? './imgs/mobalytics_drawing_fun.png' : './imgs/mobalytics_drawing.png'),
+            src: fun ? process.env.PUBLIC_URL + '/imgs/mobalytics_drawing_fun.png' : process.env.PUBLIC_URL + '/imgs/mobalytics_drawing.png',
             description: "My attempt at replicating Mobalytics' beautiful look.",
             color: 'border-purple-700'
         },
         {
             name: 'Xtreme Fitness',
             href: 'http://xtremefitnessmadera.com',
-            src: process.env.PUBLIC_URL + (fun ? './imgs/xtreme_drawing_fun.png' : './imgs/xtreme_drawing.png'),
+            src: fun ? process.env.PUBLIC_URL + '/imgs/xtreme_drawing_fun.png' : process.env.PUBLIC_URL + '/imgs/xtreme_drawing.png',
             description: "Recent website for a client that I enjoyed working on.",
             color: 'border-yellow-400'
         },
         {
             name: 'My Github',
             href: 'https://github.com/onetrckchris',
-            src: process.env.PUBLIC_URL + (fun ? './imgs/github_drawing_fun.png' : './imgs/github_drawing.png'),
+            src: fun ? process.env.PUBLIC_URL + '/imgs/github_drawing_fun.png' : process.env.PUBLIC_URL + '/imgs/github_drawing.png',
             description: "Some of my other projects, personal and for school!",
             color: 'border-green-700'
         }
