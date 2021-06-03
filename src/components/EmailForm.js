@@ -33,7 +33,7 @@ export const EmailForm = ({ formValues, setFormValues, onInputChange, onFormSubm
                     </div>
                     <input className="form-input" onChange={onInputChange} value={formValues.phone} placeholder="Phone #"  name="phone" type="text" />
                     <textarea className="form-input h-36" onChange={onInputChange} value={formValues.message} placeholder="Write to me here..."  name="message" />
-                    <button className={`rounded-md p-4 text-white ${fun ? 'bg-green-900' : 'bg-black'}`} type="submit" value="Send it over!">Send it over!</button>
+                    <button className={`rounded-md p-4 text-white ${fun ? 'orange-bg' : 'bg-black'}`} type="submit" value="Send it over!">Send it over!</button>
                 </form>
                 : <h1 className="text-3xl py-20 md:ml-12">Thank you!</h1>
             }
