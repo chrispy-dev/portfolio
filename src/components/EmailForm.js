@@ -28,7 +28,7 @@ export const EmailForm = ({ formValues, setFormValues, onInputChange, onFormSubm
                 !emailSent
                 ? <form onSubmit={sendEmail} className="flex flex-col justify-center mt-8 md:ml-12 w-full pb-10 font-roboto-slab">
                     <div className="flex flex-col md:flex-row">
-                        <input className="form-input mr-2" onChange={onInputChange} value={formValues.name} placeholder="Name" name="name" type="text" />
+                        <input className="form-input md:mr-2" onChange={onInputChange} value={formValues.name} placeholder="Name" name="name" type="text" />
                         <input className="form-input" onChange={onInputChange} value={formValues.email} placeholder="Email"  name="email" type="email" />
                     </div>
                     <input className="form-input" onChange={onInputChange} value={formValues.phone} placeholder="Phone #"  name="phone" type="text" />
