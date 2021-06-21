@@ -11,10 +11,10 @@ export const Projects = ({ fun, colorChanger }) => {
             color: 'border-purple-700'
         },
         {
-            name: 'Xtreme Fitness',
-            href: 'http://xtremefitnessmadera.com',
+            name: 'Most Played Champ',
+            href: 'https://sleepy-easley-bfd9e1.netlify.app/',
             src: fun ? process.env.PUBLIC_URL + '/imgs/xtreme_drawing_fun.png' : process.env.PUBLIC_URL + '/imgs/xtreme_drawing.png',
-            description: "Recent website I enjoyed working on for a client.",
+            description: "Pulled some fun player data from Riot API to display to all.",
             disclaimer: "_",
             color: 'border-yellow-400'
         },

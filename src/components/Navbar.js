@@ -17,9 +17,9 @@ export const Navbar = ({ isOpen, setIsOpen, fun, setFun, colorChanger }) => {
                 <FontAwesomeIcon className={`text-2xl cursor-pointer ${fun ? 'text-red-600' : ''} ${isOpen ? "transform rotate-45" : ""}`} icon={isOpen ? faPlus : faBars} onClick={() => setIsOpen(!isOpen)} />
             </div>
             <Collapse className="flex flex-col shadow-nav relative items-center md:items-end md:pr-12 z-10 bg-white" isOpen={isOpen}>
-                <Link className="plain-link nav-link-mobile" to="/about" onClick={() => setIsOpen(false)}>{colorChanger('About')}</Link>
-                <Link className="plain-link nav-link-mobile" to="/projects" onClick={() => setIsOpen(false)}>{colorChanger('Projects')}</Link>
-                <Link className="plain-link nav-link-mobile pb-12" to="/contact" onClick={() => setIsOpen(false)}>{colorChanger('Contact')}</Link>
+                <Link className="plain-link nav-link-mobile select-none" to="/about" onClick={() => setIsOpen(false)}>{colorChanger('About')}</Link>
+                <Link className="plain-link nav-link-mobile select-none" to="/projects" onClick={() => setIsOpen(false)}>{colorChanger('Projects')}</Link>
+                <Link className="plain-link nav-link-mobile select-none pb-12" to="/contact" onClick={() => setIsOpen(false)}>{colorChanger('Contact')}</Link>
             </Collapse>
         </div>
     )

@@ -57,7 +57,7 @@ const App = () => {
   };
 
   return (
-    <div className={fun ? "font-fredoka-one" : "font-roboto-slab"}>
+    <div className={`${fun ? "font-fredoka-one" : "font-roboto-slab"}`}>
       <Navbar 
         isOpen={isOpen}
         setIsOpen={setIsOpen}
