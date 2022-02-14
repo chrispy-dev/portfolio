@@ -7,6 +7,7 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Projects } from './pages/Projects';
 import { Contact } from './pages/Contact';
+import { Kippy } from './pages/Kippy';
 
 import './App.css';
 
@@ -85,6 +86,13 @@ const App = () => {
 
         <Route exact path="/projects" render={() => {
           return <Projects 
+            fun={fun}
+            colorChanger={colorChanger}
+          />
+        }} />
+
+        <Route exact path="/kippy" render={() => {
+          return <Kippy 
             fun={fun}
             colorChanger={colorChanger}
           />

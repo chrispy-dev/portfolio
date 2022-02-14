@@ -19,7 +19,8 @@ export const Navbar = ({ isOpen, setIsOpen, fun, setFun, colorChanger }) => {
             <Collapse className="flex flex-col shadow-nav relative items-center md:items-end md:pr-12 z-10 bg-white" isOpen={isOpen}>
                 <Link className="plain-link nav-link-mobile select-none" to="/about" onClick={() => setIsOpen(false)}>{colorChanger('About')}</Link>
                 <Link className="plain-link nav-link-mobile select-none" to="/projects" onClick={() => setIsOpen(false)}>{colorChanger('Projects')}</Link>
-                <Link className="plain-link nav-link-mobile select-none pb-12" to="/contact" onClick={() => setIsOpen(false)}>{colorChanger('Contact')}</Link>
+                <Link className="plain-link nav-link-mobile select-none" to="/contact" onClick={() => setIsOpen(false)}>{colorChanger('Contact')}</Link>
+                <Link className="plain-link nav-link-mobile select-none pb-12" to="/kippy" onClick={() => setIsOpen(false)}>{colorChanger('Kippy')}</Link>
             </Collapse>
         </div>
     )
